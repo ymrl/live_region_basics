@@ -1,0 +1,11 @@
+`aert` `log` `status` （`marquee` `timer`）ロールは、それぞれ暗黙の `aria-live` 属性をもつ
+
+- `alert` は `aria-live="assertive"` `aria-atomic="true"` をもつ
+- `log` は `aria-live="polite"` をもつ
+- `status` は `aria-live="polite"` `aria-atomic="true"` をもつ
+- （`marquee` `timer` は `aria-live="off"` をもつ）
+
+
+`<output>` 要素は、暗黙の `status` ロールをもつため、ライブリージョンになる
+
+（`<marquee>` は [HTML Accessibility Api Mappings](https://www.w3.org/TR/html-aam-1.0/#html-element-role-mappings) に記載されていない）

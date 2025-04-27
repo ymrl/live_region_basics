@@ -1,0 +1,27 @@
+import {DemoWrapper} from './demo/components';
+import {DelayDemo} from './demo/DelayDemo';
+
+ライブリージョンの出現よりちょっと遅れて内容を入れると読む。
+
+どれくらい遅らせればいいかは環境による（Safariでは10ミリ秒程度だと読まないことがある）
+
+<DemoWrapper>
+  <DelayDemo />
+</DemoWrapper>
+
+```tsx
+const [showMessage, setShowMessage] = useState(false);
+useEffect(() => {
+  if (message) {
+    // 100ミリ秒後に showMessage を true にする
+    const timeoutId = setTimeout(()=>{ setShowMessage(true) }, 100)
+    return () => { clearTimeout(timeoutId) }
+  } else {
+    setShowMessage(false)
+  }
+},[message])
+
+{
+  message && <div aria-live="polite">{showMessage && message}</div>
+}
+```

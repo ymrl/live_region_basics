@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: 'Noto Sans JP', sans-serif;
+  --default-mono-font-family: 'M PLUS 1 Code', monospace;
+  --text-base: 2rem;
+  --text-sm: 1.5rem;
+  --text-xs: 1rem;
+  --text-lg: 3rem;
+  --text-xl: 4rem;
+  --text-2xl: 5rem;
+  --text-3xl: 6rem;
+  --text-4xl: 8rem;
+  --text-5xl: 10rem;
+  --text-6xl: 12rem;
+  --text-7xl: 15rem;
+
+  --color-black: #333;
+}
+

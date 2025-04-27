@@ -1,0 +1,11 @@
+import {DemoWrapper} from './demo/components';
+import {AppearDemo} from './demo/AppearDemo';
+
+`aria-live` は**更新**を通知するので、要素が出現した時に書かれているものは読み上げない
+
+```tsx
+{
+  // これだとスクリーンリーダーが読み上げない
+  message && <div aria-live="polite">{message}</div>
+}
+```

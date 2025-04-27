@@ -1,0 +1,22 @@
+
+```jsx
+import { useState } from 'react';
+const LiveRegionDemo = () => {
+  const [message, setMessage] = useState('');
+  return (
+    <>
+      <button
+        onClick={() => {
+          const now = new Date();
+          const hour = now.getHours();
+          const min = now.getMinutes();
+          const sec = now.getSeconds();
+          setMessage(`そうね、だいたい${hour}時${min}分${sec}秒ね`);
+        }}>
+        いま何時？
+      </button>
+      <div aria-live="polite">{message}</div>
+    </>
+  );
+};
+```
