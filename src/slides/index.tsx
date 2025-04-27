@@ -303,34 +303,6 @@ export const slides = [
       にまとめられているが、あらためて調査すると、テスト時とは状況が変化しているものもある模様。
     </Paragraph>
   </SlideBase>,
-  <SlideBase title="PC-Talkerでのライブリージョン" id="pc-talker">
-    <Paragraph>
-      日本で最も使われているスクリーンリーダーであるPC-Talkerでは、裏メニューみたいな場所から有効化しなければライブリージョンを読み上げない
-    </Paragraph>
-    <Blockquote>
-      <Paragraph>
-        #PCトーカー には
-        <br />
-        アクセシビリティ通知
-        <br />
-        という機能があり、初期値はオフになっています。
-        <br />
-        オンにすると画面の変化など操作に役立つかもしれない情報を読み上げるようになります。
-        <br />
-        コントロール+Windows+オルト+V
-        <br />
-        で切り替えられます。
-      </Paragraph>
-    </Blockquote>
-    <Paragraph>
-      （
-      <Link href="https://x.com/pc_slash/status/1802173731793727541">
-        X: 視覚障害者(目の不自由な方々)のためのパソコン教室 スラッシュ
-      </Link>
-      ）
-    </Paragraph>
-    <Paragraph>情報は2025年4月現在のものです</Paragraph>
-  </SlideBase>,
   <SlideBase
     title="macOS VoiceOver + Safari でのライブリージョン"
     id="macos-vo-safari"
@@ -356,13 +328,8 @@ export const slides = [
           </ListItem>
         </List>
       </ListItem>
-      <ListItem>
-        ライブリージョン要素が出現してからしばらくはライブリージョンとして扱われない
-      </ListItem>
     </List>
-    <Note>
-      情報は2025年4月にmacOS Sequoia 15.4.1で確認したものです
-    </Note>
+    <Note>情報は2025年4月にmacOS Sequoia 15.4.1で確認したものです</Note>
   </SlideBase>,
   <SlideBase title="NVDA + Chromeでのライブリージョン" id="nvda-chrome">
     <List>
@@ -442,6 +409,41 @@ export const slides = [
     <Note>
       情報は2025年4月にNVDA日本語版（2024.4.2jp(2024.4.2.3753)）およびMozilla
       Firefox 137.0.2で確認したものです
+    </Note>
+  </SlideBase>,
+  <SlideBase title="PC-Talkerでのライブリージョン" id="pc-talker">
+    <List>
+      <ListItem>
+        PC-Talkerでは、以前は
+        <Link href="https://x.com/pc_slash/status/1802173731793727541">
+          キーボードショートカットでライブリージョンの読み上げを有効化する必要があった
+        </Link>
+        <List>
+          <ListItem>
+            現在はデフォルトで有効になっている模様（設定を初期化しても有効であった）
+          </ListItem>
+        </List>
+      </ListItem>
+      <ListItem>
+        ライブリージョンが短い期間に2回以上更新された場合、2回目以降を読み上げないようになっている模様
+        <List>
+          <ListItem>
+            ライブリージョン要素を空にすると、その次の更新は読み上げられるようになる
+          </ListItem>
+          <ListItem>
+            <Code>aria-relevant="text"</Code>
+            にした場合は、短い期間に更新を繰り返しても読み上げられる
+          </ListItem>
+        </List>
+      </ListItem>
+      <ListItem>
+        <Code>alert</Code>ロールの出現時に内容を読み上げない
+      </ListItem>
+    </List>
+    <Note>
+      情報は2025年4月に、PC-Talker Neo クリエイター版 64bit Version 2412
+      (ビルド62) および NetReader Neo ネオモード クリエイター版 Version 2502
+      (ビルド64) Chromium バージョン 130.0.6723.117で確認したものです
     </Note>
   </SlideBase>,
   <SlideBase
