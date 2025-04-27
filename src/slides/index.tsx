@@ -534,8 +534,7 @@ export const slides = [
     <Paragraph>
       いつもなら暗黙のロールや属性を使うことを推奨しているが、いまの状況では
       <Code>aria-live="polite"</Code>または<Code>aria-live="polite"</Code>と、
-      <Code>aria-atomic="true"</Code>
-      （ただし、ライブリージョンにラベルを付けない）以外を使うことは、はあまり推奨できない。
+      <Code>aria-atomic="true"</Code>を使い、凝ったことをしないほうがよさそう。
     </Paragraph>
   </SlideBase>,
 ];
