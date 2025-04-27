@@ -2,14 +2,11 @@
 setMessage(
   <ParentTagName>
     そうね、だいたい
-      <TagName>{`${hour}時`}</TagName>
-      <TagName>{`${min}分`}</TagName>
-      <TagName>{`${sec}秒`}</TagName>
-    ね
-  </ParentTagName>
-);
-<section
-  aria-label="勝手に時刻通知" aria-live="polite" aria-atomic={atomic}>
+    <TagName>{`${hour}時`}</TagName>
+    <TagName>{`${min}分`}</TagName>
+    <TagName>{`${sec}秒`}</TagName>ね
+  </ParentTagName>);
+<section aria-label="勝手に時刻通知" aria-live="polite" aria-atomic={atomic}>
   {message}
 </section>
 ```

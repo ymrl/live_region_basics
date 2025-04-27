@@ -78,20 +78,22 @@ export const AriaAtomicDemo = () => {
           ))}
         </fieldset>
       </div>
-      <label className="flex flex-row items-center bg-gray-100 px-4 py-2 rounded">
-        <input
-          type="checkbox"
-          className="mr-2 scale-125"
-          name="tagName"
-          checked={hasLiveRegionLabel}
-          onChange={(e) => {
-            setHasLiveRegionLabel(e.target.checked);
-          }}
-        />
-        <span className="text-sm font-mono">
-          ライブリージョンにラベルを付ける
-        </span>
-      </label>
+      <div className="flex flex-row items-center gap-4 flex-wrap">
+        <label className="flex flex-row items-center bg-gray-100 px-4 py-2 rounded">
+          <input
+            type="checkbox"
+            className="mr-2 scale-125"
+            name="tagName"
+            checked={hasLiveRegionLabel}
+            onChange={(e) => {
+              setHasLiveRegionLabel(e.target.checked);
+            }}
+          />
+          <span className="text-sm font-mono">
+            ライブリージョンにラベルを付ける
+          </span>
+        </label>
+      </div>
     </div>
   );
 };

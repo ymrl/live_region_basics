@@ -67,7 +67,7 @@ export const App = () => {
     <>
     <main
       ref={containerRef}
-      className="w-screen h-screen overflow-y-scroll snap-y snap-mandatory"
+      className="w-screen h-screen overflow-y-scroll md:snap-y snap-mandatory"
     >
       <MDXProvider components={components}>
         {slides.map((Slide, i) => (
@@ -76,7 +76,7 @@ export const App = () => {
             ref={(el) => {
               slideRefs.current[i] = el!;
             }}
-            className="snap-start w-full h-screen"
+            className="snap-start w-full min-h-screen"
           >
             <SlideFrame>{Slide}</SlideFrame>
           </div>
