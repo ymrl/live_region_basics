@@ -7,6 +7,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/live_region_basics/",
   plugins: [
     {
       enforce: "pre",
