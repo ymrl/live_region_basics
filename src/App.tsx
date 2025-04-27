@@ -34,7 +34,6 @@ export const App = () => {
     (delta: number) => {
       const next = Math.min(Math.max(current + delta, 0), slides.length - 1);
       const slide = slideRefs.current[next];
-      console.log("scrollToSlide", delta, current, next, slide);
       if (!slide) return;
       // slide.scrollIntoView({ behavior: "smooth",  });
       const slideId = slide.querySelector("[id]")?.id;
