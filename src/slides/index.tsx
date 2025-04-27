@@ -5,6 +5,7 @@ import {
   ListItem,
   Paragraph,
   Link,
+  Note,
 } from "../components/elements";
 import { SlideBase } from "../components/SlideBase";
 import WhatIsLiveRegion from "./WhatIsLiveRegion.mdx";
@@ -359,9 +360,9 @@ export const slides = [
         ライブリージョン要素が出現してからしばらくはライブリージョンとして扱われない
       </ListItem>
     </List>
-    <Paragraph>
+    <Note>
       情報は2025年4月にmacOS Sequoia 15.4.1で確認したものです
-    </Paragraph>
+    </Note>
   </SlideBase>,
   <SlideBase title="NVDA + Chromeでのライブリージョン" id="nvda-chrome">
     <List>
@@ -408,10 +409,10 @@ export const slides = [
         <Code>aria-busy="true"</Code>のときの更新を通知してくれない
       </ListItem>
     </List>
-    <Paragraph>
+    <Note>
       情報は2025年4月にNVDA日本語版（2024.4.2jp(2024.4.2.3753)）およびGoogle
       Chrome 135.0.7049.115で確認したものです
-    </Paragraph>
+    </Note>
   </SlideBase>,
   <SlideBase title="NVDA + Firefoxでのライブリージョン" id="nvda-firefox">
     <List>
@@ -438,10 +439,10 @@ export const slides = [
         <Code>aria-atomic="true"</Code>が機能していない
       </ListItem>
     </List>
-    <Paragraph>
+    <Note>
       情報は2025年4月にNVDA日本語版（2024.4.2jp(2024.4.2.3753)）およびMozilla
       Firefox 137.0.2で確認したものです
-    </Paragraph>
+    </Note>
   </SlideBase>,
   <SlideBase
     title="iOS VoiceOver + Safari でのライブリージョン"
@@ -481,7 +482,7 @@ export const slides = [
         </List>
       </ListItem>
     </List>
-    <Paragraph>情報は2025年4月にiOS 18.4.1で確認したものです</Paragraph>
+    <Note>情報は2025年4月にiOS 18.4.1で確認したものです</Note>
   </SlideBase>,
   <SlideBase
     title="Android TalkBack + Chromeでのライブリージョン"
@@ -516,7 +517,10 @@ export const slides = [
         ライブリージョン要素が出現したとき、その内容を読み上げる
       </ListItem>
     </List>
-    <Paragraph>情報は2025年4月にAquos wish 4（Android 14, Google Chrome 135.0.7049.111, Androidユーザー補助設定ツール 15.2.1.743808607）で確認したものです</Paragraph>
+    <Note>
+      情報は2025年4月にAquos wish 4（Android 14, Google Chrome 135.0.7049.111,
+      Androidユーザー補助設定ツール 15.2.1.743808607）で確認したものです
+    </Note>
   </SlideBase>,
   <SlideBase title="おわりに" id="summary">
     <Paragraph>
