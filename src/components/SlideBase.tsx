@@ -17,7 +17,7 @@ export const SlideBase = ({
   const titleId = `slide-title-${slideId}`;
   return (
     <section
-      className="flex flex-col justify-start items-start w-full h-full text-left p-4"
+      className="flex flex-col justify-start items-start w-full min-h-full text-left p-8"
       id={id}
       // Safari + VoiceOver で次のスライドに行けなくなってしまったので、regionロールにするのをやめている
       // （section要素はアクセシブルネームを与えることでregionロールになる）
