@@ -1,5 +1,4 @@
 import {
-  Blockquote,
   Code,
   List,
   ListItem,
@@ -532,9 +531,16 @@ export const slides = [
       しかし、支援技術（スクリーンリーダー）によって挙動が異なることが多く、仕様書だけを見て凝ったことをやろうとするとユーザーには上手く伝わらない状況になりえる。
     </Paragraph>
     <Paragraph>
-      いつもなら暗黙のロールや属性を使うことを推奨しているが、いまの状況では
+      個人としては、いつもなら暗黙のロールや属性を使うことを推奨している。しかしいまの状況では
       <Code>aria-live="polite"</Code>または<Code>aria-live="polite"</Code>と、
-      <Code>aria-atomic="true"</Code>を使い、凝ったことをしないほうがよさそう。
+      <Code>aria-atomic="true"</Code>
+      （ただし、ライブリージョンにラベルを付けない）のみを使い、凝ったことはしないほうがよいかもしれない。
+    </Paragraph>
+    <Paragraph>
+      <Link href="https://aria-barriers.shuaruta.com/2023/12/22/aria-live.html">
+        ライブリージョンが更新されつづけることで、閲覧や操作の妨げになる場合もある
+      </Link>
+      ので、ご利用は計画的に。
     </Paragraph>
   </SlideBase>,
 ];
