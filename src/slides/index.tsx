@@ -391,7 +391,7 @@ export const slides = [
         <Code>aria-live="assertive"</Code>は割り込んだりする挙動は同じ
       </ListItem>
       <ListItem>
-        <Code>aria-atomic="false"</Code>は、<Code>&lt;span&lgt;;</Code>要素でも
+        <Code>aria-atomic="false"</Code>は、<Code>&lt;span&gt;</Code>要素でも
         <Code>&lt;div&gt;</Code>要素でも、直下の要素以外に対しても機能する
       </ListItem>
       <ListItem>
@@ -536,7 +536,7 @@ export const slides = [
     </Paragraph>
     <Paragraph>
       個人としては、いつもなら暗黙のロールや属性を使うことを推奨している。しかしいまの状況では
-      <Code>aria-live="polite"</Code>または<Code>aria-live="polite"</Code>と、
+      <Code>aria-live="polite"</Code>または<Code>aria-live="assertive"</Code>と、
       <Code>aria-atomic="true"</Code>
       （ただし、ライブリージョンにラベルを付けない）のみを使い、凝ったことはしないほうがよいかもしれない。
     </Paragraph>
