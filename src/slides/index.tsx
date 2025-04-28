@@ -21,6 +21,7 @@ import { AriaRelevantDemo } from "./demo/AriaRelevantDemo";
 import { AriaBusyDemo } from "./demo/AriaBusyDemo";
 import { AppearDemo } from "./demo/AppearDemo";
 import { PoliteClock } from "./demo/components/PoliteClock";
+import { ShortcutKeySwitch } from "../components/ShortcutKeySwitch";
 
 export const slides = [
   <SlideBase
@@ -39,7 +40,7 @@ export const slides = [
   >
     <p className="mt-4 text-lg">ymrl</p>
 
-    <p className="mt-12 text-sm text-gray-700">
+    <Paragraph>
       このスライドは
       <kbd className="mx-1 text-slate-900 py-0.5 px-2 rounded-lg border-slate-400 border bg-slate-200">
         J
@@ -51,7 +52,10 @@ export const slides = [
       キーで前のスライドへ移動します。
       <br />
       スクロールでも移動できます。
-    </p>
+    </Paragraph>
+    <div className="mt-4">
+      <ShortcutKeySwitch />
+    </div>
   </SlideBase>,
   <SlideBase title="自己紹介" id="profile">
     <List>
