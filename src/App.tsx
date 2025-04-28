@@ -52,7 +52,7 @@ export const App = () => {
       }
       setTimeout(() => {
         slide.querySelector<HTMLElement>("a,button,[tabindex]")?.focus();
-      }, 300);
+      }, 800);
     },
     [current, shortcutKeyEnabled]
   );
