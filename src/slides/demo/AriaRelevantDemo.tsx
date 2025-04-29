@@ -8,6 +8,10 @@ export const AriaRelevantDemo = () => {
     "additions",
     "text",
   ]);
+  const [TagName, setTagName] = useState<"span" | "div" | undefined>("div");
+  const [ParentTagName, setParentTagName] = useState<
+    "span" | "div" | undefined
+  >(undefined);
 
   const selectedAll = relevantValues.includes("all");
 
@@ -38,8 +42,59 @@ export const AriaRelevantDemo = () => {
         aria-live="polite"
         aria-relevant={relevantAttribute}
         updateType="element"
-        updateTagName="div"
+        updateTagName={TagName}
+        updateParentTagName={ParentTagName}
       />
+      <div className="flex flex-row items-center gap-4 flex-wrap">
+        <fieldset className="flex flex-row gap-2 flex-wrap">
+          <legend className="text-sm font-mono">TagName</legend>
+          {(["div", "span", undefined] as const).map((tag) => (
+            <label
+              className="flex flex-row items-center bg-gray-100 px-4 py-2 rounded"
+              key={tag}
+            >
+              <input
+                type="radio"
+                className="mr-2 scale-125"
+                name="relevantDemo-tagName"
+                checked={TagName === tag}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setTagName(tag);
+                  }
+                }}
+              />
+              <span className="text-sm font-mono">
+                {tag ? `<${tag}>` : "React.Fragment"}
+              </span>
+            </label>
+          ))}
+        </fieldset>
+        <fieldset className="flex flex-row gap-2 flex-wrap">
+          <legend className="text-sm font-mono">ParentTagName</legend>
+          {(["div", "span", undefined] as const).map((tag) => (
+            <label
+              className="flex flex-row items-center bg-gray-100 px-4 py-2 rounded"
+              key={tag}
+            >
+              <input
+                type="radio"
+                className="mr-2 scale-125"
+                name="relevantDemo-parentTagName"
+                checked={ParentTagName === tag}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setParentTagName(tag);
+                  }
+                }}
+              />
+              <span className="text-sm font-mono">
+                {tag ? `<${tag}>` : "React.Fragment"}
+              </span>
+            </label>
+          ))}
+        </fieldset>
+      </div>
     </div>
   );
 };
