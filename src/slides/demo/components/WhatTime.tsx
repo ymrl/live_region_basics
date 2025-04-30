@@ -12,7 +12,7 @@ import { LiveRegion, LiveRegionAttributes } from "./LiveRegion";
 
 export const WhatTime = ({
   updateType = "string",
-  updateTagName = "span",
+  updateTagName,
   liveRegionTagName = "div",
   buttonLabel = "いま何時？",
   ariaLive,
@@ -36,7 +36,7 @@ export const WhatTime = ({
     const hour = now.getHours();
     const min = now.getMinutes();
     const sec = now.getSeconds();
-    const TagName = updateTagName;
+    const TagName = updateTagName || Fragment;
     const ParentTag = updateParentTagName || Fragment;
     const message =
       updateType === "string" ? (
